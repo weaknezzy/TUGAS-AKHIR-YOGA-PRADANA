@@ -1,0 +1,40 @@
+/* Tailwind CSS via CDN */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Custom styles for modal */
+.modal-backdrop {
+    backdrop-filter: blur(4px);
+}
+
+/* Animation for modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-animate {
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .modal-content {
+        box-shadow: none;
+        border: none;
+    }
+} 
